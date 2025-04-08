@@ -1,0 +1,170 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Varela Round", sans-serif;
+  background-color: #000;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  background-color: #121212;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #282828;
+}
+
+nav img {
+  height: 40px;
+  margin-right: 15px;
+}
+
+nav h1 {
+  font-size: 1.5rem;
+}
+
+.container {
+  flex: 1;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: auto;
+}
+
+.container h2 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.songlist {
+  width: 100%;
+  max-width: 600px;
+}
+
+.song {
+  background-color: #1e1e1e;
+  padding: 15px 20px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  gap: 12px;
+}
+
+.song:hover {
+  background-color: #333;
+}
+
+.song span {
+  flex-grow: 1;
+  font-size: 1rem;
+}
+
+.song i {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #1db954;
+}
+
+.thumbnail {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.bottom {
+  background-color: #181818;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid #282828;
+}
+
+#progressBar {
+  width: 80%;
+  margin-bottom: 10px;
+  accent-color: #1db954;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.icons i {
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #fff;
+  transition: color 0.2s;
+}
+
+.icons i:hover {
+  color: #1db954;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .song {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .thumbnail {
+    margin-bottom: 8px;
+  }
+
+  .song span,
+  .song i {
+    align-self: flex-start;
+  }
+
+  nav h1 {
+    font-size: 1.2rem;
+  }
+
+  .container h2 {
+    font-size: 1rem;
+  }
+}
+#nowPlaying {
+  font-size: 0.9rem;
+  margin-top: 8px;
+  color: #aaa;
+}
+#songTitle {
+  color: #1db954;
+}
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.volume-control i {
+  color: #1db954;
+  font-size: 1.2rem;
+}
+
+#volumeSlider {
+  width: 150px;
+  accent-color: #1db954;
+}
